@@ -1,0 +1,8 @@
+body {
+    height: 165svh;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Фон повністю відображається, без обрізання */
+    background-attachment: scroll; /* Фон залишається на місці при скролі */
+}
+
