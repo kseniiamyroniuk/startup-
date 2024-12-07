@@ -1,8 +1,70 @@
-body {
-    height: 165svh;
-    background-image: url('bg.jpg');
+:root {
+    --text-main: #1e1e1e;
+}
+* {
+    font-family: 'Ubuntu', sans-serif;
+    justify-content: center;
+    align-items: center;;
+}
+#part1, #part2 {
+    margin-top: -1%; 
     background-repeat: no-repeat;
-    background-size: cover; /* Фон повністю відображається, без обрізання */
-    background-attachment: scroll; /* Фон залишається на місці при скролі */
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
 }
 
+#part1 {
+    min-height: 100vh; 
+    background-image: url('bg_1.jpg');
+    position: relative;
+
+} 
+#part2 {
+    position: relative;
+    min-height: 70vh; 
+    background-image: url('bg_2.jpg');
+}
+
+
+.button_main {
+    color: var(--text-main);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 1.5%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    text-decoration: none;
+    padding: 0.7% 1%;
+    border-radius: 5vw;
+    font-size: 1.2vw;
+}
+.button_main:hover {
+    border: 1px solid var(--text-main); 
+}
+.button_main img {
+    width: 1.3vw; 
+    height: 1.3vw; 
+    margin-bottom: -4%;
+}
+.buttons_play {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 2%;
+}
+.garden {
+    position: relative; 
+    border: 1px solid red;
+    width: 80vw; /* Розмір контейнера */
+    height: 60vh;
+    margin: auto;
+}
+.apple {
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    transition: all 0.5s ease;
+}
