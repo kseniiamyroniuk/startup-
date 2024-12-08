@@ -18,11 +18,18 @@
     <div id="part2">
         <!-- справа від гнома -->
         <div class="buttons_play">
-          <button class="play">Грати</button> 
+          <button onclick="" class="play">Грати</button> 
           <button class="rules">Інструкція</button>
         </div>
         
-        
+        <h1>Опитування</h1>
+    <div id="question">Яке число більше: 3 чи 4?</div>
+    <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
+    <button id="submitAnswer">Відповісти</button>
+  
+    <div id="nextStep" style="display: none;">
+        <button onclick="Game(2)">Перейти до наступного питання</button>
+    </div>
         <!-- на галявині -->
         <!-- робимо щоб на кожному рівні повялялись якбула -->
          <div class="garden">
@@ -31,10 +38,8 @@
             <img class="quest2 apple" src="q_3.png" alt="">
          </div>
          
+        <button onclick="Game(2)">;hdkhflz.k</button>
         
-        <!-- зверху або знизу на галявині -->
-        <!-- додаємл оптування з однаєю правильною відповіддю -->
-        <form action=""></form>
      
     </div>
     <script src="game1.js"></script>

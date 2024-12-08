@@ -8,21 +8,18 @@
 }
 #part1, #part2 {
     margin-top: -1%; 
+    min-height: 100vh; 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: auto;
+    position: relative;
 }
 
 #part1 {
-    min-height: 100vh; 
     background-image: url('bg_1.jpg');
-    position: relative;
-
 } 
 #part2 {
-    position: relative;
-    min-height: 70vh; 
     background-image: url('bg_2.jpg');
 }
 
@@ -58,7 +55,7 @@
 .garden {
     position: relative; 
     border: 1px solid red;
-    width: 80vw; /* Розмір контейнера */
+    width: 40vw; /* Розмір контейнера */
     height: 60vh;
     margin: auto;
 }
