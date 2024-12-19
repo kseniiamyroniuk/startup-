@@ -1,15 +1,26 @@
+const AllApples = document.querySelectorAll('.apple');
+const AllLevels = document.querySelectorAll('.level');
+hideElements(AllApples);
+hideElements(AllLevels);
 
 function Game(i) {
-    const AllApples = document.querySelectorAll('.apple');
-    AllApples.forEach(element => {
-        element.style.display = 'none';
-    });
-    const AllApples_I = document.querySelectorAll(`.quest${i}`);
+    hideElements(AllApples);
+    hideElements(AllLevels);
+    const level = document.querySelector(`.lvl${i}`);
+    level.style.display = 'block';
+    const AllApples_I = document.querySelectorAll(`.q${i}`);
     AllApples_I.forEach(element => {
         element.style.display = 'block';
     });
     randomizeApples(); 
-};
+}
+
+function hideElements(elements) {
+    elements.forEach(element => {
+        element.style.display = 'none';
+    });
+}
+
 function randomizeApples() {
     const garden = document.querySelector('.garden'); // Контейнер
     const apples = document.querySelectorAll('.apple'); // Усі "яблука"
@@ -30,16 +41,26 @@ function randomizeApples() {
 }
 
 
-// Починаємо з першого питання
-Game(1);
-const correctAnswers = ["4"]; // Масив правильних відповідей
-let currentQuestion = 0; // Номер поточного питання
+function launchConfetti() {
+    // Запускаємо конфеті з рандомними параметрами
+    confetti({
+        particleCount: 400, // Кількість частинок
+        spread: 100,         // Кут розльоту
+        angle: 90,
+        origin: { x: 0.5, y: 1.2 }, // Нижня частина екрана
+        colors: ['#ff0000', '#00ff00', '#0000ff'], // Червоний, зелений, синій
+        shapes: ['circle'], // Форма частинок
+        gravity: 0.2, // Слабша гравітація, конфеті буде повільніше падати
+    });
+}
 
-document.getElementById("submitAnswer").addEventListener("click", () => {
-    const answerInput = document.getElementById("answerInput");
-    const nextStep = document.getElementById("nextStep");
 
-    if (answerInput.value === correctAnswers[currentQuestion]) {
-        nextStep.style.display = "block"; // Показуємо кнопку для переходу
-    } 
-});
+function rules() {
+    alert(
+        `Інструкція для батьків:
+        1.Відкрити сайт та ознайомте дитину з головним персонажем — помічником-гномиком.
+        2.Допомагайте дитині на перших етапах, пояснюючи завдання.
+        3.Дозволяйте дитині діяти самостійно, але підтримуйте її і підбадьорюйте.
+        4.Хваліть за кожний успіх, навіть найменший.`
+    )
+}

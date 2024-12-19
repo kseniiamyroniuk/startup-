@@ -6,42 +6,65 @@
     <title>....</title>
     <link rel="icon" href="...." type="image/png">
     <link rel="stylesheet" href="game1.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div id="part1">
-        <!-- зверху екрана -->
         <a href="" class="button_main"><img src="216242_home_icon.png" alt="home">  Головна</a>
 
     </div>
     
     <div id="part2">
-        <!-- справа від гнома -->
-        <div class="buttons_play">
-          <button onclick="" class="play">Грати</button> 
-          <button class="rules">Інструкція</button>
+        <div class="buttons">
+          <button onclick="Game(1)" class="button_play_rules">Грати</button> 
+          <button onclick="rules()" class="button_play_rules">Інструкція</button>
+        </div>
+        <div>
+            <h1>Cкільки яблук на галявині?</h1>
+            <div class="lvl1 level">
+                <button class="button_answer">2</button>
+                <button onclick="Game(2)" class="button_answer">3</button>
+                <button class="button_answer">5</button>
+                <button class="button_answer">7</button>  
+            </div>
+            <div class="lvl2 level">
+                <button class="button_answer">2</button>
+                <button class="button_answer">6</button>
+                <button onclick="Game(3)" class="button_answer">4</button>
+                <button class="button_answer">8</button>  
+            </div>
+            <div class="lvl3 level">
+                <button class="button_answer">3</button>
+                <button onclick="Game(4)" class="button_answer">6</button>
+                <button class="button_answer">1</button>
+                <button class="button_answer">4</button>  
+            </div>
+            <div class="lvl4 level">
+                <button class="button_answer">2</button>
+                <button class="button_answer">6</button>
+                <button onclick="Game(5)" class="button_answer">5</button>
+                <button class="button_answer">3</button>  
+            </div>
+            <div class="lvl5 level">
+                <button class="button_answer">2</button>
+                <button class="button_answer">5</button>
+                <button class="button_answer">3</button>
+                <button onclick="launchConfetti()" class="button_answer">1</button>  
+            </div> 
         </div>
         
-        <h1>Опитування</h1>
-    <div id="question">Яке число більше: 3 чи 4?</div>
-    <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
-    <button id="submitAnswer">Відповісти</button>
-  
-    <div id="nextStep" style="display: none;">
-        <button onclick="Game(2)">Перейти до наступного питання</button>
+        <div class="garden">
+           <img class="q1 q3 q4 q5 apple" src="apples/apple1.png" alt="">
+           <img class="q2 q3 q4 apple" src="apples/apple2.png" alt="">
+           <img class="q1 q2 q3 apple" src="apples/apple3.png" alt="">
+           <img class="q2 q3 q4 apple" src="apples/apple4.png" alt="">
+           <img class="q1 q2 q3 q4 apple" src="apples/apple5.png" alt="">
+           <img class="q3 q4 apple" src="apples/apple6.png" alt="">
+        </div>
     </div>
-        <!-- на галявині -->
-        <!-- робимо щоб на кожному рівні повялялись якбула -->
-         <div class="garden">
-            <img class="quest1 apple" src="q_1.png" alt="">
-            <img class="quest1 apple" src="q_2.png" alt="">
-            <img class="quest2 apple" src="q_3.png" alt="">
-         </div>
-         
-        <button onclick="Game(2)">;hdkhflz.k</button>
-        
-     
-    </div>
+ 
     <script src="game1.js"></script>
 </body>
 </html>
